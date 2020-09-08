@@ -11,7 +11,6 @@ public abstract class Account implements IBaseRate {
 
     public Account(String name) {
         this.name = name;
-
         this.index++;
     }
 
@@ -19,7 +18,10 @@ public abstract class Account implements IBaseRate {
         this(name);
         this.ssn = ssn;
         this.balance = initDeposit;
+        this.setRate();
     }
+
+    public abstract void setRate();
 
     protected String setAccountNumber(AccountsIds account) {
         String lastTwoSsn = ssn.substring(ssn.length() - 2, ssn.length());

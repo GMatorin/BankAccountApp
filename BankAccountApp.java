@@ -6,5 +6,8 @@ public class BankAccountApp {
         Savings save1 = new Savings("Doe John", "456456", 2500);
 
         save1.showInfo();
+         System.out.println("=======");
+
+        check1.showInfo();
     }
 }
